@@ -28,6 +28,15 @@ def home():
 @app.route('/home')
 def sdfb():
 	return render_template('home.html', new_friends= facebook_friends)
+@app.route('/friend_exists/<string:friend>', methods=['GET','POST'])
+def friend(friend):
+	if friend in facebook_friends:
+		friend_is_friend = True
+	else:
+		friend_is_friend=False
+	return render_template('friend_exists.html', friend=friend, friend_name=friend_is_friend)
+		
+
 
 if __name__ == "__main__":  # Makes sure this is the main process
 	app.run( # Starts the site
