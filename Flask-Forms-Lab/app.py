@@ -11,7 +11,7 @@ app = Flask(  # Create a flask app
 
 username = "yanay"
 password = "123"
-facebook_friends=["Loai","Yonathan","Adan", "George", "Fouad", "Celina"]
+facebook_friends=["Loai","Yonathan","Adan", "George", "Fouad", "Celina", "ashiraz"]
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
